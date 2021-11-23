@@ -4,18 +4,18 @@ Learn how to detect and exploit SQL Injection vulnerabilities.
 
 Nov 23, 2021
 
-### `Task 1: Brief`
+#### `Task 1: Brief`
 #### - What does SQL stand for?
 	- Structured Query Language
 	
-### `Task 2: What is a Database?`
+#### `Task 2: What is a Database?`
 #### - What is the acronym for the software that controls a database?
 	- DBMS
 	
 #### - What is the name of the grid-like structure which holds the data?
 	- Table
 	
-### `Task 3: What is SQL?`
+#### `Task 3: What is SQL?`
 #### - What SQL statement is used to retrieve data?
 	- SELECT
 	
@@ -25,11 +25,11 @@ Nov 23, 2021
 #### - What SQL statement is used to add data?
 	- INSERT
 
-### `Task 4: What is SQL Injection?`
+#### `Task 4: What is SQL Injection?`
 #### - What character signifies the end of an SQL query?
 	- ;
 
-### `Task 5: In-Band SQLi?`
+#### `Task 5: In-Band SQLi?`
 Deploy the machine, then use the given commands by inserting it next to the last parameter.
 - This will give you the database, then use the next one 
 ```
