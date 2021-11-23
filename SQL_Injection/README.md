@@ -31,7 +31,7 @@ Nov 23, 2021
 
 #### `Task 5: In-Band SQLi?`
 Deploy the machine, then use the given commands by inserting it next to the last parameter.
-- This will give you the database, then use the next one 
+This will give you the database, then use the next one 
 ```
 0 UNION SELECT 1,2,database()
 ```
