@@ -21,3 +21,13 @@ Nov 23, 2021
 	
 #### - What SQL clause can be used to retrieve data from multiple tables?
 	- UNION
+	
+#### - What SQL statement is used to add data?
+	- INSERT
+
+## Task 4: What is SQL Injection?
+#### - What character signifies the end of an SQL query?
+	- ;
+
+## Task 5: In-Band SQLi?
+#### Deploy the machine 
