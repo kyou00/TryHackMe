@@ -47,6 +47,6 @@ Deploy the machine, then use the given commands by inserting it next to the last
 ```
 0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
 ```
-By doing the steps above you will find the username and password, then you can proceed inputting it in the login form.
+By doing the steps above you will be able to find the username and password, then you can proceed inputting it in the login form.
 
 
