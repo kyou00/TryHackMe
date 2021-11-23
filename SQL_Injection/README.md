@@ -8,12 +8,14 @@ Nov 23, 2021
 ##### - What does SQL stand for?
 	- Structured Query Language
 	
+	
 #### `Task 2: What is a Database?`
 ##### - What is the acronym for the software that controls a database?
 	- DBMS
 	
 ##### - What is the name of the grid-like structure which holds the data?
 	- Table
+	
 	
 #### `Task 3: What is SQL?`
 ##### - What SQL statement is used to retrieve data?
@@ -25,9 +27,11 @@ Nov 23, 2021
 ##### - What SQL statement is used to add data?
 	- INSERT
 
+
 #### `Task 4: What is SQL Injection?`
 ##### - What character signifies the end of an SQL query?
 	- ;
+
 
 #### `Task 5: In-Band SQLi?`
 Deploy the machine, then use the given commands by inserting it next to the last parameter.
@@ -49,6 +53,7 @@ This will display the contents of that column
 ```
 By doing the steps above you will be able to find the username and password, then you can proceed inputting it in the login form and you will get the flag in the next page.
 
+
 #### `Task 6: Blind SQLi - Authentication Bypass`
 The next one is basically bypassing the authentication with the help of simple SQL injection,
 In the login form you can basically input any username you want but in the password section I used- 
@@ -56,6 +61,7 @@ In the login form you can basically input any username you want but in the passw
 ' OR 1=1;--
 ```
 This means that the server will receive the payload as an true statement and will proceed to login the account.
+
 
 #### `Task 7: Blind SQLi - Boolean Based`
 This task will have an indicator when the characters that are being type are equal to the actual name of the database,table or column.
@@ -100,6 +106,7 @@ admin123' UNION SELECT 1,2,3 from users where username='admin' and password like
 admin123' UNION SELECT 1,2,3 from users where username='admin' and password like '384%';--
 ```
 
+
 #### `Task 8: Blind SQLi - Time Based`
 This is the same as the previous task but instead it will use the time to indicate that you are getting the exact characters for the actual name in the database.
 First, we will test the application by using this code-
@@ -140,9 +147,11 @@ admin123' UNION SELECT SLEEP(2),2 from users where username ='admin' and passwor
 ```
 After a few try we now know the correct username and password. `admin:4961`
 
+
 #### `Task 9: Out-of-Band SQLi`
 ##### - Name a protocol beginning with D that can be used to exfiltrate data from a database.
 	- DNS
+
 
 #### `Task 10: Remediation`
 ##### - Name a method of protecting yourself from an SQL Injection exploit.
