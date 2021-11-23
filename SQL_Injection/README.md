@@ -5,7 +5,7 @@ Learn how to detect and exploit SQL Injection vulnerabilities.
 Nov 23, 2021
 
 ### Task 1: Brief
-#### - What does SQL stand for?
+#### - `What does SQL stand for?`
 	- Structured Query Language
 	
 ### Task 2: What is a Database?
