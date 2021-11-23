@@ -4,19 +4,19 @@ Learn how to detect and exploit SQL Injection vulnerabilities.
 
 Nov 23, 2021
 
-#### `Task 1: Brief`
+		#### `Task 1: Brief`
 ##### - What does SQL stand for?
 	- Structured Query Language
 	
 	
-#### `Task 2: What is a Database?`
+		#### `Task 2: What is a Database?`
 ##### - What is the acronym for the software that controls a database?
 	- DBMS
 ##### - What is the name of the grid-like structure which holds the data?
 	- Table
 	
 
-#### `Task 3: What is SQL?`
+		#### `Task 3: What is SQL?`
 ##### - What SQL statement is used to retrieve data?
 	- SELECT
 ##### - What SQL clause can be used to retrieve data from multiple tables?
@@ -25,12 +25,12 @@ Nov 23, 2021
 	- INSERT
 
 
-#### `Task 4: What is SQL Injection?`
+		#### `Task 4: What is SQL Injection?`
 ##### - What character signifies the end of an SQL query?
 	- ;
 
 
-#### `Task 5: In-Band SQLi?`
+		#### `Task 5: In-Band SQLi?`
 Deploy the machine, then use the given commands by inserting it next to the last parameter.
 This will give you the database, then use the next one 
 ```
@@ -52,7 +52,7 @@ By doing the steps above you will be able to find the username and password, the
 
 
 
-#### `Task 6: Blind SQLi - Authentication Bypass`
+		#### `Task 6: Blind SQLi - Authentication Bypass`
 The next one is basically bypassing the authentication with the help of simple SQL injection,
 In the login form you can basically input any username you want but in the password section I used- 
 ```
@@ -62,7 +62,7 @@ This means that the server will receive the payload as an true statement and wil
 
 
 
-#### `Task 7: Blind SQLi - Boolean Based`
+		#### `Task 7: Blind SQLi - Boolean Based`
 This task will have an indicator when the characters that are being type are equal to the actual name of the database,table or column.
 When the application will return true that means that you are typing the correct character or number. 
 
@@ -107,7 +107,7 @@ admin123' UNION SELECT 1,2,3 from users where username='admin' and password like
 
 
 
-#### `Task 8: Blind SQLi - Time Based`
+		#### `Task 8: Blind SQLi - Time Based`
 This is the same as the previous task but instead it will use the time to indicate that you are getting the exact characters for the actual name in the database.
 First, we will test the application by using this code-
 ```
@@ -149,12 +149,12 @@ After a few try we now know the correct username and password. `admin:4961`
 
 
 
-#### `Task 9: Out-of-Band SQLi`
+		#### `Task 9: Out-of-Band SQLi`
 ##### - Name a protocol beginning with D that can be used to exfiltrate data from a database.
 	- DNS
 
 
 
-#### `Task 10: Remediation`
+		#### `Task 10: Remediation`
 ##### - Name a method of protecting yourself from an SQL Injection exploit.
 	- Prepared Statements
