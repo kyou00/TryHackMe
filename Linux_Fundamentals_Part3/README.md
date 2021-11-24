@@ -48,8 +48,9 @@ Nov 24, 2021
 #### Task 6: Maintaining Your System: Automation
 - Ensure you are connected to the deployed instance and look at the running crontabs.
   - `no answer needed` 
+> You just need to use `crontab -e` to view the file and then it is on the last part. 
 - When will the crontab on the deployed instance (10.10.80.99) run?
-  - `@reboot` | I just get it by using `crontab -e` and it is on the last part 
+  - `@reboot` 
 
 #### Task 7: Maintaining Your System: Package Management
 - Since TryHackMe instances do not have an internet connection...this task only requires you to read through the material.
