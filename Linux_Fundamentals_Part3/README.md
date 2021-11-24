@@ -65,3 +65,7 @@ Nov 24, 2021
   - `catsanddogs.jpg`
 
 #### Task 9: Conclusions & Summaries
+- Terminate the machine deployed in this room from task 2. 
+  - `no answer needed`
+- Continue your learning in other Linux-dedicated rooms.
+  - `no asnwer needed`
