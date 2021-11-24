@@ -6,7 +6,7 @@ Nov 24, 2021
 
 #### Task 1: Introduction
 - Let's proceed!
- - `no answer needed`
+  - `no answer needed`
 
 #### Task 2: Accessing Your Linux Machine Using SSH (Deploy)
 - I've logged into the Linux Fundamentals Part 2 machine using SSH!
