@@ -58,7 +58,7 @@ Nov 24, 2021
 #### Task 8: Maintaining Your System: Logs
 - Look for the apache2 logs on the deployable Linux machine
   - `no answer needed`
-> You just have to cat the access.log.1 in the `/var/log/apache2`
+> You just have to cat the access.log.1 in the `/var/log/apache2` to get the answer in the following questions.
 - What is the IP address of the user who visited the site?
   - `10.9.232.111`
 - What file did they access?
