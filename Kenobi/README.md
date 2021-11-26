@@ -213,9 +213,13 @@ export PATH=/tmp:$PATH
 /usr/bin/menu
 ```
 The first command is to change directory to the /tmp directory.
+
 Then we will echo the /bin/sh file into new file curl.
+
 Then change the permissions of the curl file to 777 which is can be read and write by all.
+
 Finally, we are going to export the /tmp to the PATH environment variable so that the curl will execute. 
+
 Then just run the menu file.
 
 - We copied the /bin/sh shell, called it curl, gave it the correct permissions and then put its location in our path. This meant that when the /usr/bin/menu binary was run, its using our path variable to find the "curl" binary.. Which is actually a version of /usr/sh, as well as this file being run as root it runs our shell as root!
