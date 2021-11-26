@@ -156,8 +156,8 @@ mkdir /mnt/kenobiNFS
 mount 10.10.64.81:/var /mnt/kenobiNFS
 ls -la /mnt/kenobiNFS
 ``` 
-The first one is to make a directory in mnt naming it kenobiNFS.
-We will mount the /var directory from the IP address to our newly created directory which is kenobiNFS and view its content.
+> The first one is to make a directory in mnt naming it kenobiNFS.
+> We will mount the /var directory from the IP address to our newly created directory which is kenobiNFS and view its content.
 
 > Then we are going to copy the id_rsa to our current directory.
 ```
