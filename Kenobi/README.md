@@ -134,13 +134,12 @@ PORT    STATE SERVICE
 
 #### Task 3: Gain initial access with ProFtpd
 
-> By using the `nc 10.10.64.81 21` command we can determine the version of the ProFTPD Server.
+> By using the `nc 10.10.64.81 21` command we can determine the version of the ProFTPD Server and connect to the server.
 
 - What is the version?
 	- `1.3.5`
 
-> I just search the version of proftpd which is `1.3.5` in the `exploit-db.com`
-then i get the answer for the next question
+> I just search the version of proftpd which is `1.3.5` in the `exploit-db.com` then i get the answer for the next question.
 
 - How many exploits are there for the ProFTPd running?
 	- `4`
@@ -157,6 +156,9 @@ mkdir /mnt/kenobiNFS
 mount 10.10.64.81:/var /mnt/kenobiNFS
 ls -la /mnt/kenobiNFS
 ```
+> The first one is to make a directory in mnt naming it kenobiNFS
+> Then we will mount the /var directory from the IP address to our newly created directory which is kenobiNFS
+> Then we wil just view it the contents of that directory
 
 > Then we are going to copy the id_rsa to our current directory.
 ```
