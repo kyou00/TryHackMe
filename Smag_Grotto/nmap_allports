@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Sun Jan 23 00:11:15 2022 as: nmap -sC -sV -oN nmap_allports -p- -vvv 10.10.1.79
