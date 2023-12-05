@@ -76,3 +76,8 @@ hydra -l '' -P 3digits.txt -f -v 10.10.179.47 http-post-form "/login.php:pin=^PA
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/3189732b-7201-46e4-9359-57486b8abfe0)
 
 After you get the password combination from hydra you can now login the account.
+
+------------------------------------------------------------
+#### Day 4: Brute-forcing - Baby, it's CeWld outside
+
+- 
