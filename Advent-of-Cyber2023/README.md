@@ -63,7 +63,16 @@ crunch 3 3 0123456789ABCDEF -o 3digits.txt
 ```
 
 Then you will navigate to the login page of the site. 
-Go to the view source code. 
+Go to the view source code. You will find the POST method.
+Which it will direct the pin to the login.php.
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/f1f3de3a-f998-4ce3-9b46-7d4cf1688069)
+
+Use hydra to bruteforce for the login password. Just use empty string for the user since it does not use a username for the login.
 ```
 hydra -l '' -P 3digits.txt -f -v 10.10.179.47 http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
 ```
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/3189732b-7201-46e4-9359-57486b8abfe0)
+
+After you get the password combination from hydra you can now login the account.
