@@ -110,4 +110,3 @@ Then login the credentials to login.php as admin you will see the THM
 
 </detail>
 
-1. Look around the source code of the site. 
