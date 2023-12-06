@@ -47,7 +47,7 @@ http://10.10.49.210/note.php?note_id=0
 
 - Read the supporting material about cracking hashes.
 	- `No answer needed`
-<detail>
+<details>
 #### Steps: 
 
 Go to crackstation.net then paste the md5 hash below
@@ -55,7 +55,7 @@ Go to crackstation.net then paste the md5 hash below
 ```
 5f4dcc3b5aa765d61d8327deb882cf99
 ```
-</detail>
+</details>
 
 #### Task 8 - Cryptographic Failure (Challenge)
 
@@ -73,7 +73,7 @@ Go to crackstation.net then paste the md5 hash below
 
 - Log in as the admin. What is the flag?
 	- `THM`
-<detail>
+<details>
 #### Steps:
 Look around the source code of the site. view-source:http://10.10.11.49:81/
 
@@ -108,5 +108,5 @@ Go to crackstation to crackt this md5 hash
 Then login the credentials to login.php as admin you will see the THM
 
 
-</detail>
+</details>
 
