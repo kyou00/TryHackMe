@@ -148,4 +148,19 @@ Just do $(cat /etc/apline-release) to show the alpine version.
 
 </details>
 
-#### Task 11 - 
+#### Task 11 - (4) Insecure Design
+
+- Try to reset joseph's password. Keep in mind the method used by the site to validate if you are indeed joseph.
+	- `No answer needed`
+
+- What is the value of the flag in joseph's account?
+	- `THM`
+
+<details>
+Steps:
+
+Navigate to the i forgot password section.
+
+
+
+</details>
