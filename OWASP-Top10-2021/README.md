@@ -132,5 +132,20 @@ Then login the credentials to login.php as admin you will see the THM
 - What version of Alpine Linux is running?
 	- `3.16.0`
 
+<details>
+Steps:
+Just do $(ls) command to show the file in the current directory.
+	
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/add045a9-5770-4fc5-aa80-cd8573ad96f6)
+
+Just do $(cat /etc/passwd) to reveal the non-root/non-service/non-daemon, for the user that runs the application, and for the user shell set.
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/961dea05-2f02-4f1b-a1d8-874d1d22302e)
+
+Just do $(cat /etc/apline-release) to show the alpine version.
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/0da68367-e461-4ad6-8a29-d60eee76935d)
+
+</details>
 
 #### Task 11 - 
