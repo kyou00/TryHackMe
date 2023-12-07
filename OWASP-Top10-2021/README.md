@@ -107,6 +107,30 @@ Go to crackstation to crackt this md5 hash
 
 Then login the credentials to login.php as admin you will see the THM
 
-
 </details>
 
+
+#### Task 9 - (3) Injection 
+
+- I've understood Injection attacks.
+	- `No answer needed`
+
+#### Task 10 - (3.1) Command Injection
+
+- What strange text file is in the website's root directory?
+	- `drpepper.txt`
+
+- How many non-root/non-service/non-daemon users are there?
+	- `0`
+
+- What user is this app running as?
+	- `apache`
+
+- What is the user's shell set as?
+	- `/sbin/nologin`
+
+- What version of Alpine Linux is running?
+	- `3.16.0`
+
+
+#### Task 11 - 
