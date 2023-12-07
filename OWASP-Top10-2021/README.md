@@ -160,7 +160,16 @@ Just do $(cat /etc/apline-release) to show the alpine version.
 Steps:
 
 Navigate to the i forgot password section.
+Use burpsuite intruder to change brute force certain possible answers
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/dc955aa5-854b-4aeb-a1c9-c0e77a4290b6)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/c4ff74fa-9915-44d4-8512-8a8fed376132)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/db2062f7-e266-4294-8ce7-6a2ce4d56b0f)
 
 
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/f87e7212-ce6e-45c8-be3a-620d37e0729f)
 
+Then just login to the user joseph using the new password to get the THM
 </details>
