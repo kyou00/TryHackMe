@@ -242,3 +242,23 @@ Just cat the /opt/flag to view the THM flag.
 
 - I've understood broken authentication mechanisms.
 	- `No answer needed`
+   
+#### Task 17 - Identification and Authentication Failures Practical
+
+- What is the flag that you found in darren's account?
+	- `fe86079416a21a3c99937fea8874b667`
+   
+- Now try to do the same trick and see if you can log in as arthur.
+	- `No answer needed`
+
+- What is the flag that you found in arthur's account?
+  	- `d9ac0f7db4fda460ac3edeb75d75e16e`
+ 
+<details>
+Steps: 
+Just create a account that similar to username darren but put space in the front of the letters " darren".
+So that you can access the account of darren but imititating his name.
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/0d95f90f-5075-491e-8492-05bb19c5fa6d)
+
+</details>
