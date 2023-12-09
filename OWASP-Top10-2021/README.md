@@ -202,6 +202,9 @@ just use the cat command to view the flag from the app.py
 ```
 import os; print(os.popen("cat app.py").read())
 ```
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/ef0139f6-c4c3-45a1-a041-024377dfc712)
+
 </details>
 
 #### Task 13 - (6) Vulnerable and Outdated Components
@@ -224,7 +227,18 @@ Steps:
 
 Download the cve from the exploit db for the CSE online bookstore.
 
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/caa85b24-50a8-44c3-939b-c331ffce974f)
+
+
 Then use that exploit to have remote shell to the server. 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/7ecf0a3d-754b-49bb-af14-73212ec185fb)
+
 
 Just cat the /opt/flag to view the THM flag.
 </details>
+
+#### Task 16 - 7. Identification and Authentication Failures
+
+- I've understood broken authentication mechanisms.
+	- `No answer needed`
