@@ -173,3 +173,58 @@ Use burpsuite intruder to change brute force certain possible answers
 
 Then just login to the user joseph using the new password to get the THM
 </details>
+
+
+#### Task 12 - (5) Security Misconfiguration
+
+- Navigate to http://MACHINE_IP:86/console to access the Werkzeug console.
+	- `No answer needed`
+
+- Use the Werkzeug console to run the following Python code to execute the ls -l command on the server:
+	- `import os; print(os.popen("ls -l").read())`
+
+- What is the database file name (the one with the .db extension) in the current directory?
+	- `todo.db`
+
+- Modify the code to read the contents of the app.py file, which contains the application's source code. What is the value of the secret_flag variable in the source code?
+	- `THM`
+
+<details>
+Steps:
+
+use this command to list the files in the current directory.
+
+```
+import os; print(os.popen("ls -l").read())
+```
+
+just use the cat command to view the flag from the app.py
+```
+import os; print(os.popen("cat app.py").read())
+```
+</details>
+
+#### Task 13 - (6) Vulnerable and Outdated Components
+
+- Read about the vulnerability.
+	- `No answer needed`
+
+#### Task 14 - Vulnerable and Outdated Components - Exploit
+
+- Read the above!
+	- `No answer needed`
+
+#### Task 15 - Vulnerable and Outdated Components - Lab
+	
+- What is the content of the /opt/flag.txt file?
+	- `THM`
+
+<details>
+Steps:
+
+Download the cve from the exploit db for the CSE online bookstore.
+
+Then use that exploit to have remote shell to the server. 
+
+Just cat the /opt/flag to view the THM flag.
+</details>
