@@ -262,3 +262,129 @@ So that you can access the account of darren but imititating his name.
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/0d95f90f-5075-491e-8492-05bb19c5fa6d)
 
 </details>
+
+#### Task 18 - (8) Software and Data Integrity Failures
+
+- Read the above and continue!
+	- `No answer needed`
+
+#### Task 19 - Software Integrity Failures
+
+- What is the SHA-256 hash of https://code.jquery.com/jquery-1.12.4.min.js?
+	- `sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=`
+
+<details>
+Steps: 
+Just put the link for the 256 hash integrity.
+	
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/8d05f7fe-2976-444a-8392-67927108478e)
+
+</details>
+
+#### Task 20 - Data Integrity Failures
+
+- Try logging into the application as guest. What is guest's account password?
+	- `guest`
+
+- What is the name of the website's cookie containing a JWT token?
+	- `jwt-session`
+
+- Use the knowledge gained in this task to modify the JWT token so that the application thinks you are the user "admin".
+	- `No answer needed`
+
+- What is the flag presented to the admin user?
+	- `THM`
+<details>.
+Steps:
+As you can see if we guess the password of user guest we can see his password in the error message.
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/753fc653-f336-46a5-bca7-e2e6580a4e90)
+
+ So just use this password to login to the website as user guest.
+
+ We can see here the session token for user guest.
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/db0573ce-2646-41c7-977e-2648361e49a7)
+
+ You may guess this is encoded using Base64 so we can use the site - https://appdevtools.com/base64-encoder-decoder 
+ 
+ To decode
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/d82c453b-9118-4c5b-ba79-885402735847)
+
+ We can also use the site to encode the modified payload.
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/7e484410-bddd-4b46-9624-570a2127cd51)
+
+ By changing the guest user to admin we can now log in as admin into the site and removing the signature from the cookie.
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/858fa213-8d2a-4cc8-aac8-3daeeadeb4ba)
+
+ ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/d0d3ea18-782d-463e-bc01-a9f88d275864)
+
+</details>
+
+#### Task 21 - (9) Security Logging and Monitoring Failures
+
+- What IP address is the attacker using?
+	- `49.99.13.16`
+
+- What kind of attack is being carried out?
+	- `Brute force`
+
+<details>
+Just cat the login-logs.txt to view the IP used by attacker
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/9973e98f-29d7-4d54-a33f-8aa4c829b305)
+
+</details>
+
+#### Task 22 - 10. Server-Side Request Forgery (SSRF)
+
+- Explore the website. What is the only host allowed to access the admin area?
+	- `localhost`
+
+- Check the "Download Resume" button. Where does the server parameter point to?
+	- `secure-file-storage.com`
+
+- Using SSRF, make the application send the request to your AttackBox instead of the secure file storage. Are there any API keys in the intercepted request?
+	- `THM`
+
+<details>
+Steps:
+
+Download the resume. 
+
+Open netcat
+
+```
+nc -lvp 80
+```
+
+As we intercept the download button we can see where does the website actually getting the file 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/844d5752-5756-4389-8133-4073b765d78e)
+
+We can manipulate this to our own attack machine so that the traffic will direct to us
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/c655ca7c-1a3e-4d52-9a44-63a2d42f2f92)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/90654b3d-4d36-4bd8-bce2-689270a2c559)
+
+As you can see we actually get the response from the server and we can see the API Key which is the flag
+
+........................
+
+By editing the server to their localhost we can now view their admin page and download the pdf file through that page.
+
+Dont forget the ID in the url since it included in the python script
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/08cd2f53-9473-4e9d-b91e-a46f7679e940)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/0e8a05c1-b873-4158-974c-e9b1e57e74c9)
+
+Just by opening the pdf file we can see the other flag 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/203b6d6b-1d9b-4102-ad09-92719bdb8a9e)
+
+</details>
