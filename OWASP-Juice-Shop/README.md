@@ -189,10 +189,6 @@ Then we will change the header for that GET request
 
 We will inject a persistent XSS attack to the server
 
-As we login a admin then go to the last login page we can now see the XSS attack
-
-![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/76440748-0973-44c8-993d-182fa0d64ff3)
-
 ```
 True-Client-IP
 
@@ -200,7 +196,10 @@ True-Client-IP
 ```
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/6028bbe1-6a42-476c-9fbf-76854c16713f)
 
-As 
+As we login a admin then go to the last login page we can now see the XSS attack
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/76440748-0973-44c8-993d-182fa0d64ff3)
+
 </details>
 
 #### Task 8 - Exploration!
