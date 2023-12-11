@@ -33,10 +33,28 @@ mc.safesearch@juice-sh.op - Mr. N00dles
 	- `fb364762a3c102b2db932069c0e6b78e738d4066`
 
 <details>
-	Steps:
-	Just put this in the username when you intercept the POST request in the website using burp. 
+Steps:
+Just put this in the username when you intercept the POST request in the website using burp
+	
+```
+' or 1=1--
+```
 
- 	This
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/369f4d0f-42aa-46fa-858e-ec042aea0a53)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/975d3c27-abba-4198-8784-6a1d1bc7e30d)
+
+Then just click forward to log in as admin.
+
+-----------------------------------------------------------------
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/5ee55031-39ce-4b9b-b1c1-9d1c00591c7a)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/c18573cb-6ec6-450b-adb6-5b40eb65b8ad)
+
+Now we are log in as bender user. 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/92e09a41-a9e2-4594-bdad-ca38be5a37f4)
 
  	
 </details>
@@ -49,6 +67,26 @@ mc.safesearch@juice-sh.op - Mr. N00dles
 - Question #2: Reset Jim's password!
 	- `094fbc9b48e525150ba97d05b942bbf114987257`
 
+<details>
+Steps:
+First you have to intercept the login credintials for the admin which you will have to enter the email address first
+
+Then we have to brute force it using the burpsuite tool 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/2ede055a-932c-4b90-9a40-ae96873da1be)
+
+Then we will input the possible passwords / password list for us to know what is the password of user admin.
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/9bb0f232-f9dc-45d9-8d6b-6b8a1bf3ec2a)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/cded44f3-3d55-4049-a97f-c11c18c3f07f)
+
+As we can see above the length of the admin123 is different from the rest which means this could be the password for user admin
+
+Then just log in as admin using that password
+
+</details>
+
 #### Task 5 - AH! Don't look!
 
 - Question #1: Access the Confidential Document!
@@ -60,6 +98,13 @@ mc.safesearch@juice-sh.op - Mr. N00dles
 - Question #3: Download the Backup file!
 	- `bfc1e6b4a16579e85e06fee4c36ff8c02fb13795`
 
+<details>
+Steps
+	
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/4e5dfc08-f2aa-48ba-925b-be0846beefc1)
+
+</details>
+
 #### Task 6 - Who's flying this thing?
 
 - Question #1: Access the administration page!
@@ -70,6 +115,39 @@ mc.safesearch@juice-sh.op - Mr. N00dles
 
 - Question #3: Remove all 5-star reviews!
 	- `50c97bcce0b895e446d61c83a21df371ac2266ef`
+
+<details>
+Steps
+Just log in as admin user that go to the developer tools then sources
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/e0429a5c-eb88-495b-93cd-c0157eb9c8b1)
+
+You will find a directory to the administration page 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/807661d5-f37e-4106-baf5-c442dd8d64cf)
+
+----------------------------------------------------------
+
+Try to intercept the basket page
+
+![image](https://github.com/kyou00/tryhackme-writeups/bassets/92074685/eb71ea44-ce4d-43c6-a496-f7199426a6ab)
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/ba24ba75-b7e0-4511-a665-dd695483e267)
+
+Then just forward forward the page
+
+After a few forward using burp
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/c149441b-803d-45aa-938b-8a0312576326)
+
+You can now see there is a basket number /rest/basket/1 which means that 1 is your baskter
+
+Try changing it to 2 
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/b9bd23ee-ce41-4570-b530-555222c8cf8b)
+
+
+</details>
 
 #### Task 7 - Where did that come from?
 
