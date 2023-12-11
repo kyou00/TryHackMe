@@ -32,6 +32,15 @@ mc.safesearch@juice-sh.op - Mr. N00dles
 - Question #2: Log into the Bender account!
 	- `fb364762a3c102b2db932069c0e6b78e738d4066`
 
+<details>
+	Steps:
+	Just put this in the username when you intercept the POST request in the website using burp. 
+
+ 	This
+
+ 	
+</details>
+
 #### Task 4 - Who broke my lock?!
 
 - Question #1: Bruteforce the Administrator account's password!
