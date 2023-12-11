@@ -146,6 +146,9 @@ Try changing it to 2
 
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/b9bd23ee-ce41-4570-b530-555222c8cf8b)
 
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/e3a24096-e612-439e-9bd0-42377f82fe23)
+
+You can now see the basket of number 2 / user 2
 
 </details>
 
@@ -159,6 +162,46 @@ Try changing it to 2
 
 - Question #3: Perform a reflected XSS!
 	- `23cefee1527bde039295b2616eeb29e1edc660a0`
+
+<details>
+Steps:
+Just put this in the search box 
+
+```
+<iframe src="javascript:alert(`xss`)"> 
+```
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/02993b92-f43d-4cc1-aa61-cba8b64352ea)
+
+Then you can easily XSS attack to the site
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/c928c19a-b924-455f-81df-a9c9c0fd64b6)
+
+------------------------------------------------------
+
+Go to the last ip login in the website
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/f1ddf96d-0c76-45aa-a095-ce441bb0c557)
+
+Then you have to logout but make sure that burp intercept the logout request
+
+Then we will change the header for that GET request 
+
+We will inject a persistent XSS attack to the server
+
+As we login a admin then go to the last login page we can now see the XSS attack
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/76440748-0973-44c8-993d-182fa0d64ff3)
+
+```
+True-Client-IP
+
+<iframe src="javascript:alert(`xss`)">
+```
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/6028bbe1-6a42-476c-9fbf-76854c16713f)
+
+As 
+</details>
 
 #### Task 8 - Exploration!
 
