@@ -91,15 +91,6 @@ After that we will get the command line to the victim's machine now we have root
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/d17408d8-c8c0-49f8-912f-a65033220c20)
 
 
-
-
-
-
-As you can see we now restore the website using the bat file
-
-![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/f6ac1f9c-00d3-435f-8ccc-13ce197f6b6c)
-
-
 ------------------------------------------------------
 3. If we will put ' or 1=1 -- in the URL parameter we can return all of the content in the database. Along side with the THM flag.
 
@@ -114,7 +105,11 @@ As you can see we now restore the website using the bat file
 
 -----------------------------------------------------
 
-5. Visit the /index.php we have a flag 
+5. Visit the /index.php we have a flag
+
+As you can see we now restore the website using the bat file
+
+![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/f6ac1f9c-00d3-435f-8ccc-13ce197f6b6c)
 
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/71c0eff7-ac59-4da6-9122-220854f775fd)
 
