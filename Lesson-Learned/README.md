@@ -55,8 +55,6 @@ Now we know the usernames that we can use we can now proceed to SQL injection.
 
 We can use this SAFE SQL injection by Tib3rius
 
-![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/301bb13e-0b6c-43dd-b230-ddbc564e82f1)
-
 ![image](https://github.com/kyou00/tryhackme-writeups/assets/92074685/31ff5559-5aa2-4127-b5af-ec1123e36293)
 
 ```
