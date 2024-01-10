@@ -1,0 +1,18 @@
+# Nmap 7.94 scan initiated Wed Jan 10 08:00:32 2024 as: nmap -sC -sV -oN nmap -vv -Pn 10.10.212.221
+Nmap scan report for 10.10.212.221
+Host is up, received user-set (0.85s latency).
+Scanned at 2024-01-10 08:00:32 PST for 125s
+Not shown: 922 filtered tcp ports (no-response), 77 filtered tcp ports (host-unreach)
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 95:09:13:a2:6e:3f:8d:21:10:5f:97:47:b1:67:a2:be (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHGS8slDetS1mi7LTqKXBl2an3mr2UgW85bUBinI9xF2aja4AHVkvcgqvsNL3T+MaZ41V/zZmRXBYNao9Lqy/NrR4aXW6q4y4gdNug0osWTgEohFJujCDWucHJl0RRljn1baAMr3olSlK9VUelds1lPpVfQRGR5Ydu8Ez0ysICGTi7s4BQt/1SITWl/73LVMGTj+ETJo2X7gPEz7pjHGRGvdk21I34XetB7v1PXcdwzn6EZ9hIXOzOZcb2hACVcZqWsQJqd4A2Pg5CIywta15OTv47Uwkjdzm9HvyiuGWpElIEtOPxXLDKPWZlrJ43ZEUhofGPM/DlB+QSI0djDSjV
+|   256 04:72:4a:a8:98:77:8f:53:4e:96:98:71:a9:76:8e:45 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEaWV1Jw+gh/OmXto11aNvoEMmqFwJHA1AjHsHYwd2xSOQNhFh9DzcI3BYROe5cX8C+vM+1+QxO6c2Jg5HOa+PU=
+|   256 2c:74:b8:9f:c3:f2:36:80:4a:51:c4:35:f8:1f:7a:f9 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM4ePsD7YbT9qPAmvq51wC025afYeKXO4bd+kDArUM7L
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 10 08:02:37 2024 -- 1 IP address (1 host up) scanned in 125.45 seconds
