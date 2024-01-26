@@ -1,0 +1,4 @@
+/images              [36m (Status: 301)[0m [Size: 315][34m [--> http://10.10.103.126/images/][0m
+/html                [36m (Status: 301)[0m [Size: 313][34m [--> http://10.10.103.126/html/][0m
+/scripts             [36m (Status: 301)[0m [Size: 316][34m [--> http://10.10.103.126/scripts/][0m
+/contracts           [36m (Status: 301)[0m [Size: 318][34m [--> http://10.10.103.126/contracts/][0m

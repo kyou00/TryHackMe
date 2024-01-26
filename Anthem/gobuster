@@ -1,0 +1,20 @@
+/search              [32m (Status: 200)[0m [Size: 3422]
+/blog                [32m (Status: 200)[0m [Size: 5399]
+/rss                 [32m (Status: 200)[0m [Size: 1877]
+/sitemap             [32m (Status: 200)[0m [Size: 1047]
+/archive             [36m (Status: 301)[0m [Size: 123][34m [--> /blog/][0m
+/categories          [32m (Status: 200)[0m [Size: 3546]
+/authors             [32m (Status: 200)[0m [Size: 4075]
+/Search              [32m (Status: 200)[0m [Size: 3422]
+/tags                [32m (Status: 200)[0m [Size: 3549]
+/install             [36m (Status: 302)[0m [Size: 126][34m [--> /umbraco/][0m
+/RSS                 [32m (Status: 200)[0m [Size: 1877]
+/Blog                [32m (Status: 200)[0m [Size: 5399]
+/Archive             [36m (Status: 301)[0m [Size: 123][34m [--> /blog/][0m
+/SiteMap             [32m (Status: 200)[0m [Size: 1047]
+/siteMap             [32m (Status: 200)[0m [Size: 1047]
+/INSTALL             [36m (Status: 302)[0m [Size: 126][34m [--> /umbraco/][0m
+/Sitemap             [32m (Status: 200)[0m [Size: 1047]
+/1073                [32m (Status: 200)[0m [Size: 5399]
+/Rss                 [32m (Status: 200)[0m [Size: 1877]
+/Categories          [32m (Status: 200)[0m [Size: 3546]
